@@ -1,25 +1,29 @@
-# Class notes
+# Jeeyar Swami Class Notes
 
-A small two-page site: a home page and a class notes page with tabs.
+Live site: https://sangeerth-p.github.io/jeeyar_swami_class_notes/
 
-## Putting it on GitHub Pages
+## Files
 
-1. Create a new repository on GitHub (for example `class-notes`).
-2. Upload all the files, keeping the `css` and `js` folders as they are.
-3. Go to **Settings → Pages**, choose **Deploy from a branch**, pick `main` and `/ (root)`, and save.
-4. After a minute the site is live at `https://<your-username>.github.io/class-notes/`.
+- `index.html` - home page
+- `classes.html` - the tiles for each subject
+- `guru-parampara.html`, `mumukshuppadi.html`, `tattvatrayam.html`,
+  `anushtanams.html`, `science.html` - the notes for each subject
+- `css/style.css` - colours, fonts and layout
+- `images/` - photos
 
 ## Adding notes
 
-All notes live in `notes.html`. Each subject is a `<section class="panel">`.
-Inside it, copy the `<article class="entry">` block for every new class.
+Open the subject's page and copy the `<article class="note">` block for each class.
+Give each one a new `id` (class-2, class-3 ...).
 
-To quote a sloka or pasuram, use:
+To write a sloka or pasuram, put it inside the note:
 
-    <div class="verse" lang="ta">first line
-    second line</div>
+    <p class="verse" lang="sa">first line
+    second line</p>
+
+Use `lang="ta"` for Tamil.
 
 ## Adding a science discussion
 
-1. In the science tab list, copy a `<li>` line and change `data-panel` (e.g. `science-3`) and the label.
-2. At the bottom of `notes.html`, copy a science `<section>` and set its `id` to the same name.
+In `science.html`, add a link in the `pills` box (e.g. `#discussion-3`) and
+copy an `<article>` with the same id.
