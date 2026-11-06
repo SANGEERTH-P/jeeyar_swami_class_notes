@@ -40,8 +40,8 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--white);
-  border-bottom: 3px solid var(--maroon);
+  background: var(--maroon);
+  border-bottom: 3px solid var(--gold);
 }
 .main-nav {
   display: flex;
@@ -67,7 +67,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--head);
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--maroon);
+  color: #FFF3D0;
   white-space: nowrap;
 }
 .nav-links {
@@ -77,14 +77,17 @@ img { max-width: 100%; display: block; }
 }
 .nav-links a {
   text-decoration: none;
-  color: var(--text);
+  color: #FFF3D0;
   font-family: var(--head);
   font-size: 1.05rem;
   font-weight: 600;
   white-space: nowrap;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
 }
-.nav-links a:hover,
-.nav-links a.active { color: var(--saffron); }
+.nav-links a:hover { color: var(--gold); }
+.nav-links a.active { color: var(--gold); border-bottom-color: var(--gold); }
+.site-header a:focus-visible { outline-color: var(--gold); }
 
 /* ---------- page frame ---------- */
 .container {
@@ -384,19 +387,55 @@ footer {
   .temple { padding: 22px 20px; }
 }
 
-/* ---------- long articles ---------- */
-.article { padding: 30px 40px; }
-.article .article-title { font-size: 1.6rem; color: var(--maroon); }
-.article > h2:not(.article-title) {
-  font-size: 1.45rem;
+/* ---------- long articles (dropdowns) ---------- */
+details.drop { padding: 0; overflow: hidden; }
+details.drop summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 22px 64px 20px 28px;
+  position: relative;
+}
+details.drop summary::-webkit-details-marker { display: none; }
+details.drop summary::after {
+  content: "";
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin-top: -9px;
+  border-right: 3px solid var(--maroon);
+  border-bottom: 3px solid var(--maroon);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+details.drop[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+details.drop summary:hover .drop-title { color: var(--maroon); }
+.drop-title {
+  font-family: var(--head);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--saffron);
+}
+details.drop summary .date { margin: 0; }
+details.drop[open] summary { border-bottom: 1px solid var(--line); }
+
+.article { padding: 8px 40px 32px; }
+.article p { font-size: 1.15rem; line-height: 1.75; margin-bottom: 14px; }
+.article > h2 {
+  font-size: 1.6rem;
   color: var(--maroon);
-  margin: 40px 0 12px;
+  margin: 42px 0 12px;
   padding-bottom: 6px;
   border-bottom: 2px solid var(--gold);
   scroll-margin-top: 110px;
 }
-.article h3 { font-size: 1.12rem; color: var(--saffron); margin: 24px 0 8px; }
-.article p { margin-bottom: 12px; }
+.article h3 { font-size: 1.28rem; color: var(--saffron); margin: 26px 0 8px; }
 
 .contents {
   background: #FFFBEF;
@@ -486,58 +525,49 @@ footer {
 .layer.phys { border: 2px solid var(--maroon); background: var(--gold); }
 .layer.phys em { background: var(--maroon); color: var(--white); }
 
-/* comparison bars */
-.bars { display: flex; flex-direction: column; gap: 14px; }
-.bar-row {
-  display: grid;
-  grid-template-columns: 210px 1fr 90px;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.92rem;
-}
-.bar-label { color: var(--text); }
-.bar-track { height: 16px; background: #F3E6C4; border-radius: 8px; overflow: hidden; }
-.bar-fill { display: block; height: 100%; background: var(--saffron); border-radius: 8px; }
-.bar-row:first-child .bar-fill { background: var(--maroon); }
-.bar-value { font-weight: 700; color: var(--maroon); text-align: right; white-space: nowrap; }
 
-/* tattva cards */
-.tattva-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+/* plain book-style tables */
+.tbl-wrap { overflow-x: auto; margin: 22px 0; }
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.02rem;
+  border-top: 2px solid var(--maroon);
+  border-bottom: 2px solid var(--maroon);
 }
-.tattva {
-  background: var(--white);
-  border: 1.5px solid var(--line);
-  border-top: 4px solid var(--saffron);
-  border-radius: 6px;
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.tbl caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--muted);
+  padding-bottom: 6px;
 }
-.tattva .t-name { font-size: 0.82rem; font-weight: 700; color: var(--muted); }
-.tattva b { color: var(--maroon); font-family: var(--head); }
-.tattva span:last-child { font-size: 0.86rem; color: #37474F; line-height: 1.4; }
-.tattva.open { border-style: dashed; border-top: 4px dashed var(--line); }
+.tbl caption b { color: var(--maroon); }
+.tbl th {
+  text-align: left;
+  font-weight: 700;
+  color: var(--maroon);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--maroon);
+}
+.tbl td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tbl tbody tr:last-child td { border-bottom: 0; }
+.tbl td:first-child { font-weight: 700; }
 
 @media (max-width: 768px) {
-  .article { padding: 20px 16px; }
-  .article .article-title { font-size: 1.35rem; }
-  .article > h2:not(.article-title) { font-size: 1.25rem; scroll-margin-top: 130px; }
+  .article { padding: 4px 16px 22px; }
+  .article p { font-size: 1.08rem; }
+  .article > h2 { font-size: 1.35rem; scroll-margin-top: 130px; }
+  .article h3 { font-size: 1.15rem; }
+  details.drop summary { padding: 18px 48px 16px 18px; }
+  details.drop summary::after { right: 18px; }
+  .drop-title { font-size: 1.35rem; }
+  .tbl { font-size: 0.9rem; }
+  .tbl th, .tbl td { padding: 7px 6px; }
   .fig { padding: 12px; }
   .dims { grid-template-columns: repeat(2, 1fr); }
   .layers { grid-template-columns: 30px 1fr; gap: 8px; }
   .thread span { font-size: 0.75rem; }
   .layer { grid-template-columns: 1fr; grid-template-areas: "name" "desc" "tag"; row-gap: 2px; }
   .layer em { justify-self: start; margin-top: 4px; }
-  .bar-row { grid-template-columns: 1fr auto; grid-template-areas: "label value" "track track"; row-gap: 4px; }
-  .bar-label { grid-area: label; }
-  .bar-value { grid-area: value; }
-  .bar-track { grid-area: track; }
-  .tattva-grid { grid-template-columns: 1fr; }
-}
-@media (min-width: 769px) and (max-width: 1000px) {
-  .tattva-grid { grid-template-columns: repeat(3, 1fr); }
 }

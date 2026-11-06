@@ -35,15 +35,21 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Small tabs: one link per discussion. The href must match the id of the article below. -->
-  <nav class="pills" aria-label="Discussions">
+  <!-- Small tabs: one link per article. The href must match the id of the <details> below. -->
+  <nav class="pills" aria-label="Articles">
     <a href="#science-and-vedanta">Science and Vedanta</a>
+    <a href="#advaita-and-science">Advaita and science</a>
   </nav>
 
   <div class="notes-list">
-    <article class="note article" id="science-and-vedanta">
-      <h2 class="article-title">Where do we draw the line between science and Vedanta?</h2>
-      <span class="date">5 November 2026</span>
+
+    <!-- ===== ARTICLE 1 ===== -->
+    <details class="note drop" id="science-and-vedanta">
+      <summary>
+        <span class="drop-title">Where do we draw the line between science and Vedanta?</span>
+        <span class="date">5 November 2026</span>
+      </summary>
+      <div class="article">
 
       <p>Science often dismisses Vedanta as having no evidence and speaking a language that makes no sense.
       This discussion turned the question around in two steps: first, the fundamental problems inside science
@@ -79,8 +85,8 @@
       the more we believe it will continue. When challenged, the reply is “I can test it”, but a test is only one
       more observation.</p>
       <p>Take a simple example. When you drop an object, you are not making it fall; you are only letting go of it.
-      Whether it falls is not in your hands. Why it falls, we do not really know: one day the answer is gravity, the
-      next it is the curvature of space-time, and later it may be something else. What we know is that it has fallen
+      Whether it falls is not in your hands. Why it falls, we do not really know: one can say it is gravity, another can
+      say it is the curvature of space-time, and later someone may say something else. What we know is that it has fallen
       a thousand times, so we expect it to fall again. That expectation is a belief. Saying “under these conditions it
       will fall” does not help, because we did not create those conditions and we do not control them.</p>
       <p>In Indian terms this is anumana (inference), as distinct from pratyaksha (direct perception). Science
@@ -139,7 +145,7 @@
             <p><b>Solid</b>The only dimension we ever meet</p>
           </div>
         </div>
-        <figcaption>Every real “point” or “line” we draw is already a solid. What we call 3D is the one physical
+        <figcaption><b>Fig. 1.</b> Every real “point” or “line” we draw is already a solid. What we call 3D is the one physical
         dimension; the others are concepts of the mind.</figcaption>
       </figure>
 
@@ -148,7 +154,9 @@
       <p>Because every measurement is built on points that cannot be realised, there is a gap between what the mind
       conceives and what exists, and this gap shows up as irrational numbers. Area and distance are only counts of a
       unit we chose, such as how many millimetres fit between two points. But how can we measure something drawn with
-      something that can never be drawn? And for subtle things like energy and charge, dimensions make no sense at all.</p>
+      something that can never be drawn? Every line we draw is supposed to be made of points, yet a point has
+      no size and cannot be drawn at all; so every length we measure is only an approximation of something that
+      does not exist on paper. And for subtle things like energy and charge, dimensions make no sense at all.</p>
 
       <h3>Truth and untruth, real and unreal: outside physics</h3>
       <p>Above mathematics comes the question of what is true and what is not, what is real and what is unreal.
@@ -159,6 +167,8 @@
       psychology. Beyond this lie feeling and experience themselves, such as the taste of something, and the sense of
       “I”: the wish to go on living and to experience more and more happiness. Neuroscience studies the brain, but it
       does not reach what lies beyond the brain.</p>
+      <p>So the takeaway is this: truth and error, intention, experience and the sense of “I” are present in every
+      observer who does physics, yet physics itself has no way to describe any of them.</p>
 
       <h3>Physics borrows from other domains</h3>
       <p>Physics has a clear boundary, and that boundary is mathematics. Physics uses numbers and groups but cannot
@@ -181,7 +191,7 @@
             <li class="layer phys"><b>Physical reality</b><span>The one dimension we meet (annamaya)</span><em>Where physics works</em></li>
           </ol>
         </div>
-        <figcaption>A person moves through every layer; physics works only at the bottom and borrows the one above it.</figcaption>
+        <figcaption><b>Fig. 2.</b> A person moves through every layer; physics works only at the bottom and borrows the one above it.</figcaption>
       </figure>
 
       <p>The point of listing these problems is not to find fault. It is to see the fact as it is.</p>
@@ -200,35 +210,27 @@
       share a common origin, but then why do we not all behave alike, and where does free will come in? Some things are
       common to all humans and some are not. And humanity is a very small sample.</p>
 
-      <figure class="fig">
-        <div class="bars" role="img" aria-label="Comparison: about 8.2 billion people, about 10 to the 22 stars, about 8.4 times 10 to the 24 water molecules in a glass">
-          <div class="bar-row">
-            <span class="bar-label">People on earth</span>
-            <span class="bar-track"><span class="bar-fill" style="width:39.6%"></span></span>
-            <span class="bar-value">8.2 × 10<sup>9</sup></span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">Stars in the observable universe</span>
-            <span class="bar-track"><span class="bar-fill" style="width:88%"></span></span>
-            <span class="bar-value">~10<sup>22</sup></span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">Molecules in one 250 ml glass of water</span>
-            <span class="bar-track"><span class="bar-fill" style="width:99.7%"></span></span>
-            <span class="bar-value">8.4 × 10<sup>24</sup></span>
-          </div>
-        </div>
-        <figcaption>Bar length shows the power of ten. A glass of water holds about a quadrillion times more molecules
-        than there are people, and more molecules than there are stars.</figcaption>
-      </figure>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <caption><b>Table 1.</b> How small a sample humanity is</caption>
+          <thead>
+            <tr><th></th><th>Approximate count</th><th>Compared with people</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>People on earth</td><td>8.2 × 10<sup>9</sup></td><td>–</td></tr>
+            <tr><td>Stars in the observable universe</td><td>10<sup>22</sup> to 10<sup>24</sup></td><td>a trillion to a hundred trillion times more</td></tr>
+            <tr><td>Molecules in one 250 ml glass of water</td><td>8.4 × 10<sup>24</sup></td><td>about a quadrillion times more</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>Next to that, agreement among human beings is a thin basis for calling anything objective.</p>
 
       <h3>Interpretation, even in the same language</h3>
       <p>Whatever means we use to describe an experience, the description can only be approximate. Even when the
       listener knows the same language, what they receive is their own interpretation, and because they have not had
-      the experience themselves, the explanation carries a vagueness that cannot be removed. Unfortunately, the
-      interpretation offered even by people who know the language well is often poor.</p>
+      the experience themselves, the explanation carries a vagueness that cannot be removed. Unfortunately, even among
+      people who know the language well, the interpretation is often poor.</p>
 
       <h3>Translation into other languages</h3>
       <p>When these ideas are translated into another language, the problem multiplies. The tanmatras are rendered
@@ -269,16 +271,21 @@
       react. Light does not react, force does not react and a stationary wave does not react, but water does. When you
       taste something, it reacts with your saliva. Anything that reacts and dissolves comes under the nature of ap.</p>
 
-      <figure class="fig">
-        <div class="tattva-grid">
-          <div class="tattva"><span class="t-name">Shabda · Akasha</span><b>Wave nature</b><span>A stationary wave beneath everything manifest</span></div>
-          <div class="tattva"><span class="t-name">Sparsha · Vayu</span><b>Force</b><span>Felt, not seen; sets the wave moving</span></div>
-          <div class="tattva"><span class="t-name">Rupa · Tejas</span><b>Particle nature</b><span>What can be seen: light and heat</span></div>
-          <div class="tattva"><span class="t-name">Rasa · Ap</span><b>Ability to react</b><span>What reacts and dissolves</span></div>
-          <div class="tattva open"><span class="t-name">Gandha · Prithvi</span><b>Still to be mapped</b><span>Needs further enquiry</span></div>
-        </div>
-        <figcaption>Each step adds a grosser property to the ones before it.</figcaption>
-      </figure>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <caption><b>Table 2.</b> Each step adds a grosser property to the ones before it</caption>
+          <thead>
+            <tr><th>Tanmatra</th><th>Element</th><th>Read as</th><th>What it adds</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Shabda</td><td>Akasha</td><td>Wave nature</td><td>A stationary wave beneath everything manifest</td></tr>
+            <tr><td>Sparsha</td><td>Vayu</td><td>Force</td><td>Felt, not seen; sets the wave moving</td></tr>
+            <tr><td>Rupa</td><td>Tejas</td><td>Particle nature</td><td>What can be seen: light and heat</td></tr>
+            <tr><td>Rasa</td><td>Ap</td><td>Ability to react</td><td>What reacts and dissolves</td></tr>
+            <tr><td>Gandha</td><td>Prithvi</td><td>–</td><td>Still to be worked out</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <h3>These mappings do not exist yet</h3>
       <p>Prithvi and gandha remain to be worked out, and all of these readings need much more enquiry. No such careful
@@ -309,20 +316,41 @@
       <p>Two things follow. On one side, Vedanta has to earn respect through clear explanation of its tattvas. On the
       other, science has to be shown that it has serious problems within its own domain, and asked to stop commenting
       carelessly on ours. Physics carries no guarantee and is full of interpretation, yet it works. No one denies that it
-      does wonders and benefits society.</p>
+      does wonders and benefits society. But Vedanta is the deeper of the two, and in it realisation is possible
+      through knowledge itself.</p>
       <p>Our own side needs cleaning up too. There are many false teachers who call themselves practitioners and claim
       realisation. We have to define the responsibility of our own group, identify who is truly learned and serious,
-      and keep the enquiry genuine. It is also time to give Advaita a break, because treating everything other than the
-      self as unreal brushes aside the large part of the Vedas that deals with the tattvas. The part of Vedanta to
+      and keep the enquiry genuine. It is also time to give Advaita a break, because when everything other than the
+      self is treated as unreal, the large part of the Vedas that deals with the tattvas is brushed aside. The part of Vedanta to
       explore is the part that enquires into the observer. Karma can wait; for now the focus can be on questions that
       can be tested, such as sukha and dukha, how we behave, and how food affects behaviour.</p>
-      <p>The plan is to present this as a video, invite people from different schools of thought, and organise an open
-      conference with scientific organisations from around the world. The invitation is to respect each other, to find
-      where the two meet, to take inputs from science and let science take inputs from us, and to see whether this
-      knowledge helps science probe in new directions. Vedanta is the deeper of the two, and in it realisation is
-      possible through knowledge itself. This rich knowledge should not be thought of as useless.</p>
-    </article>
+      </div>
+    </details>
+
+    <!-- ===== ARTICLE 2 (content to come) ===== -->
+    <details class="note drop" id="advaita-and-science">
+      <summary>
+        <span class="drop-title">Advaita cannot explain science</span>
+        <span class="date">Date to be added</span>
+      </summary>
+      <div class="article">
+        <p class="empty">This article will be added soon.</p>
+      </div>
+    </details>
+
   </div>
+
+  <script>
+    // Open an article when its link (#id) is used, then scroll to it.
+    function openFromHash() {
+      var el = location.hash && document.getElementById(location.hash.slice(1));
+      if (!el) return;
+      var d = el.tagName === 'DETAILS' ? el : el.closest('details');
+      if (d) { d.open = true; el.scrollIntoView(); }
+    }
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
+  </script>
 </main>
 
 <footer>
