@@ -1,0 +1,250 @@
+/* ------------------------------------------------------------
+   Colours are taken from the things on a thinnai desk:
+   palm-leaf manuscript, ink, srichurnam red, tulasi green.
+   ------------------------------------------------------------ */
+:root {
+  --leaf: #efe6cf;        /* page background, like an ola leaf */
+  --leaf-dark: #e3d6b4;   /* sidebar, borders */
+  --ink: #33261a;         /* body text */
+  --ink-soft: #6b5843;    /* secondary text */
+  --red: #9e1f1a;         /* srichurnam red, used sparingly */
+  --tulasi: #4b6545;      /* links, science section */
+  --gold: #b08a3e;        /* thin rules */
+
+  --head: "Noto Serif Devanagari", "Noto Serif Tamil", Georgia, serif;
+  --body: Calibri, Carlito, "Noto Sans Tamil", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 16px; }   /* 12pt */
+
+body {
+  margin: 0;
+  background: var(--leaf);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--head);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+a { color: var(--tulasi); }
+a:hover { color: var(--red); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--gold);
+}
+.site-name {
+  font-family: var(--head);
+  font-size: 1.15rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.topbar nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+.topbar nav a[aria-current="page"] {
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+}
+
+/* ---------- home ---------- */
+.home {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
+}
+.invocation {
+  font-family: var(--head);
+  color: var(--red);
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 0 0 2.5rem;
+}
+.home h1 {
+  font-size: 2.4rem;
+  margin: 0 0 .25rem;
+}
+.home h1 .ta {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--ink-soft);
+  font-weight: 400;
+  margin-top: .35rem;
+}
+.home .intro { margin: 1.5rem 0 2.5rem; }
+
+.subjects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--leaf-dark);
+}
+.subjects li { border-bottom: 1px solid var(--leaf-dark); }
+.subjects a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: .85rem .25rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.subjects a:hover { background: var(--leaf-dark); }
+.subjects .en { font-family: var(--head); font-size: 1.1rem; }
+.subjects .ta { color: var(--ink-soft); font-size: .95rem; text-align: right; }
+
+.small-print {
+  margin-top: 3rem;
+  font-size: .9rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- notes layout ---------- */
+.notes {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  min-height: calc(100vh - 4rem);
+}
+
+.index {
+  background: var(--leaf-dark);
+  padding: 1.5rem 1rem 2rem;
+  border-right: 1px solid var(--gold);
+}
+.index h2 {
+  font-size: .95rem;
+  color: var(--ink-soft);
+  font-weight: 400;
+  margin: 0 0 .5rem .5rem;
+}
+.index h2.science-head { margin-top: 2rem; }
+
+.tabs { list-style: none; margin: 0; padding: 0; }
+
+.tab {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-left: 3px solid transparent;
+  padding: .55rem .6rem;
+  cursor: pointer;
+  color: var(--ink);
+  font: inherit;
+}
+.tab .en { display: block; font-family: var(--head); font-size: 1rem; }
+.tab .ta { display: block; font-size: .9rem; color: var(--ink-soft); }
+.tab:hover { background: rgba(255,255,255,.35); }
+.tab[aria-selected="true"] {
+  border-left-color: var(--red);
+  background: var(--leaf);
+}
+
+/* science discussions are the small tabs */
+.tabs.small { display: flex; flex-wrap: wrap; gap: .4rem; padding-left: .5rem; }
+.tabs.small .tab {
+  width: auto;
+  border: 1px solid var(--tulasi);
+  border-radius: 3px;
+  padding: .2rem .55rem;
+  font-size: .85rem;
+  color: var(--tulasi);
+}
+.tabs.small .tab[aria-selected="true"] {
+  background: var(--tulasi);
+  color: var(--leaf);
+}
+
+/* ---------- note panels ---------- */
+.panel {
+  max-width: 44rem;
+  padding: 2.25rem 2.5rem 4rem;
+}
+.panel[hidden] { display: none; }
+
+.panel > h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.panel > .ta-title {
+  font-family: var(--head);
+  font-size: 1.3rem;
+  color: var(--red);
+  margin: .2rem 0 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gold);
+}
+.panel h2 { font-size: 1.35rem; margin: 2rem 0 .5rem; }
+.panel h3 { font-size: 1.1rem; margin: 1.5rem 0 .4rem; }
+.panel p { margin: 0 0 1rem; }
+
+/* a single class entry inside a subject */
+.entry { margin-bottom: 2.5rem; }
+.entry .date {
+  font-size: .9rem;
+  color: var(--ink-soft);
+  margin: -.25rem 0 .75rem;
+}
+
+/* for quoting a sloka or pasuram */
+.verse {
+  font-family: var(--head);
+  margin: 1.25rem 0;
+  padding: .75rem 1rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(255,255,255,.3);
+  white-space: pre-line;
+}
+
+.empty {
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 760px) {
+  .notes { grid-template-columns: 1fr; }
+  .index {
+    border-right: 0;
+    border-bottom: 1px solid var(--gold);
+    padding: 1rem .75rem;
+  }
+  .tabs:not(.small) {
+    display: flex;
+    overflow-x: auto;
+    gap: .25rem;
+  }
+  .tabs:not(.small) .tab {
+    white-space: nowrap;
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+  }
+  .tabs:not(.small) .tab[aria-selected="true"] { border-bottom-color: var(--red); }
+  .index h2.science-head { margin-top: 1rem; }
+  .panel { padding: 1.5rem 1.1rem 3rem; }
+  .home h1 { font-size: 1.9rem; }
+  .subjects a { flex-direction: column; gap: 0; }
+  .subjects .ta { text-align: left; }
+}

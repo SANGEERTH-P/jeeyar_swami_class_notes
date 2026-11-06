@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+Tamil:wght@400;600&family=Noto+Sans+Tamil:wght@400;600&family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Class notes</title>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="site-name" href="index.html">Class notes</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="notes.html" aria-current="page">Class notes</a>
+  </nav>
+</header>
+
+<div class="notes">
+
+  <!-- ================= TAB LIST ================= -->
+  <aside class="index">
+    <h2>Subjects</h2>
+    <ul class="tabs" role="tablist">
+      <li><button class="tab" role="tab" data-panel="guru-parampara">
+        <span class="en">Guru Parampara Prabhavam</span>
+        <span class="ta" lang="ta">குருபரம்பரா ப்ரபாவம்</span></button></li>
+      <li><button class="tab" role="tab" data-panel="mumukshuppadi">
+        <span class="en">Mumukshuppadi</span>
+        <span class="ta" lang="ta">முமுக்ஷுப்படி</span></button></li>
+      <li><button class="tab" role="tab" data-panel="tattvatrayam">
+        <span class="en">Tattvatrayam</span>
+        <span class="ta" lang="ta">தத்வத்ரயம்</span></button></li>
+      <li><button class="tab" role="tab" data-panel="anushtanams">
+        <span class="en">Anushtanams</span>
+        <span class="ta" lang="ta">அனுஷ்டானங்கள்</span></button></li>
+    </ul>
+
+    <h2 class="science-head">Science discussions</h2>
+    <!-- To add a discussion: copy one <li> line, give it a new data-panel name,
+         then add a matching <section> further down -->
+    <ul class="tabs small" role="tablist">
+      <li><button class="tab" role="tab" data-panel="science-1">Discussion 1</button></li>
+      <li><button class="tab" role="tab" data-panel="science-2">Discussion 2</button></li>
+    </ul>
+  </aside>
+
+  <!-- ================= NOTES ================= -->
+  <main>
+
+    <section class="panel" id="guru-parampara" role="tabpanel">
+      <h1>Guru Parampara Prabhavam</h1>
+      <p class="ta-title" lang="ta">குருபரம்பரா ப்ரபாவம்</p>
+
+      <!-- Copy this whole <article> block for each new class -->
+      <article class="entry">
+        <h2>Class 1</h2>
+        <p class="date">Date of class</p>
+        <p class="empty">Notes for this class will go here.</p>
+      </article>
+    </section>
+
+    <section class="panel" id="mumukshuppadi" role="tabpanel" hidden>
+      <h1>Mumukshuppadi</h1>
+      <p class="ta-title" lang="ta">முமுக்ஷுப்படி</p>
+      <article class="entry">
+        <h2>Class 1</h2>
+        <p class="date">Date of class</p>
+        <p class="empty">Notes for this class will go here.</p>
+      </article>
+    </section>
+
+    <section class="panel" id="tattvatrayam" role="tabpanel" hidden>
+      <h1>Tattvatrayam</h1>
+      <p class="ta-title" lang="ta">தத்வத்ரயம்</p>
+      <article class="entry">
+        <h2>Class 1</h2>
+        <p class="date">Date of class</p>
+        <p class="empty">Notes for this class will go here.</p>
+      </article>
+    </section>
+
+    <section class="panel" id="anushtanams" role="tabpanel" hidden>
+      <h1>Anushtanams</h1>
+      <p class="ta-title" lang="ta">அனுஷ்டானங்கள்</p>
+      <article class="entry">
+        <h2>Class 1</h2>
+        <p class="date">Date of class</p>
+        <p class="empty">Notes for this class will go here.</p>
+      </article>
+    </section>
+
+    <section class="panel" id="science-1" role="tabpanel" hidden>
+      <h1>Discussion 1</h1>
+      <p class="ta-title" lang="ta">அறிவியல் உரையாடல்</p>
+      <p class="empty">Notes for this discussion will go here.</p>
+    </section>
+
+    <section class="panel" id="science-2" role="tabpanel" hidden>
+      <h1>Discussion 2</h1>
+      <p class="ta-title" lang="ta">அறிவியல் உரையாடல்</p>
+      <p class="empty">Notes for this discussion will go here.</p>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/notes.js"></script>
+</body>
+</html>
