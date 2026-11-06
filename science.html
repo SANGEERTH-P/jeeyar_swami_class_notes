@@ -37,21 +37,290 @@
 
   <!-- Small tabs: one link per discussion. The href must match the id of the article below. -->
   <nav class="pills" aria-label="Discussions">
-    <a href="#discussion-1">Discussion 1</a>
-    <a href="#discussion-2">Discussion 2</a>
+    <a href="#science-and-vedanta">Science and Vedanta</a>
   </nav>
 
   <div class="notes-list">
-    <article class="note" id="discussion-1">
-      <h2>Discussion 1</h2>
-      <span class="date">Date of class</span>
-      <p class="empty">Notes for this discussion will go here.</p>
-    </article>
+    <article class="note article" id="science-and-vedanta">
+      <h2 class="article-title">Where do we draw the line between science and Vedanta?</h2>
+      <span class="date">5 November 2026</span>
 
-    <article class="note" id="discussion-2">
-      <h2>Discussion 2</h2>
-      <span class="date">Date of class</span>
-      <p class="empty">Notes for this discussion will go here.</p>
+      <p>Science often dismisses Vedanta as having no evidence and speaking a language that makes no sense.
+      This discussion turned the question around in two steps: first, the fundamental problems inside science
+      itself; then, honestly, the problems inside our own tradition. The aim is not to find fault with either
+      side but to see the facts clearly, so that the two can work together.</p>
+
+      <nav class="contents" aria-label="In this article">
+        <p class="contents-head">In this article</p>
+        <ol>
+          <li><a href="#sci-problems">Problems in science</a></li>
+          <li><a href="#ved-problems">Problems in Vedanta</a></li>
+          <li><a href="#tattvas">Reading the tattvas afresh</a></li>
+          <li><a href="#computer">The computer and the question “who am I?”</a></li>
+          <li><a href="#way-forward">The way forward</a></li>
+        </ol>
+      </nav>
+
+      <!-- ================= PART 1 ================= -->
+      <h2 id="sci-problems">1. Problems in science</h2>
+
+      <h3>Darwinian theory: data is not evidence</h3>
+      <p>Darwin’s theory is often presented as proven, but what we actually have is data, and the theory is an
+      interpretation of that data, at best the best interpretation available. We have observed adaptation, animals
+      adjusting to their surroundings, but no animal has been observed turning into another animal. The reply that
+      such change takes millions of years cannot itself be tested. When two organisms differ slightly, it is assumed
+      that the one with fewer features evolved into the one with more. That is an interpretation, made partly because
+      the possibility that both simply existed side by side is not considered.</p>
+      <p>Treating related organisms as connected can be a useful working assumption, and it does help research.
+      That use is not disputed. But data read through a theory is not evidence for the theory.</p>
+
+      <h3>Inductive reasoning: science also has faith</h3>
+      <p>Most of physics rests on induction. We observe the same pattern many times, and the more often we see it,
+      the more we believe it will continue. When challenged, the reply is “I can test it”, but a test is only one
+      more observation.</p>
+      <p>Take a simple example. When you drop an object, you are not making it fall; you are only letting go of it.
+      Whether it falls is not in your hands. Why it falls, we do not really know: one day the answer is gravity, the
+      next it is the curvature of space-time, and later it may be something else. What we know is that it has fallen
+      a thousand times, so we expect it to fall again. That expectation is a belief. Saying “under these conditions it
+      will fall” does not help, because we did not create those conditions and we do not control them.</p>
+      <p>In Indian terms this is anumana (inference), as distinct from pratyaksha (direct perception). Science
+      believes and has faith. It accepts that faith because it lets research proceed, yet refuses the same allowance
+      to yoga, meditation or Vedanta, claiming to accept only perception.</p>
+
+      <h3>The observer is always inside the experiment</h3>
+      <p>Physics claims to describe the world independently of any observer, yet every one of its statements comes
+      from observation. After observing, it quietly removes the observer from the equation and announces “this is its
+      nature”. The formulas, the logic and the mathematics applied to those observations do not exist out in the world;
+      they come from the same mind that observed.</p>
+      <p>Units are a clear example. No metre exists in nature. When we say the earth travels so many kilometres per
+      hour, the hour is defined by our own cycle of day and night. In a universal context, who defines a second? The
+      speed of light is a speed only relative to the second and the metre that we chose. Even a computer does not
+      calculate in any meaningful sense: it follows instructions and stores what it is given, and the data on its disk
+      means nothing until a person makes sense of it. The biggest contributor to every equation, the observer, is the
+      one that is left out.</p>
+
+      <h3>The illusion of dimensions</h3>
+      <p>We speak of one, two and three dimensions, but a straight line cannot even be defined in a way that holds up.
+      A line is said to be a series of infinite points, and a point has no measure and no unit: it is only a location.
+      Such a point can be imagined but never realised; anything we actually draw as a point is a three-dimensional
+      object. So 1D and 2D exist only in the mind.</p>
+
+      <figure class="fig">
+        <div class="dims">
+          <div class="dim">
+            <svg viewBox="0 0 100 100" role="img" aria-label="A point">
+              <circle cx="50" cy="50" r="3.5" fill="#6A0000"/>
+            </svg>
+            <p><b>Point</b>A location with no size</p>
+          </div>
+          <div class="dim">
+            <svg viewBox="0 0 100 100" role="img" aria-label="A line made of points">
+              <g fill="#6A0000">
+                <circle cx="12" cy="50" r="2.5"/><circle cx="24" cy="50" r="2.5"/><circle cx="36" cy="50" r="2.5"/>
+                <circle cx="48" cy="50" r="2.5"/><circle cx="60" cy="50" r="2.5"/><circle cx="72" cy="50" r="2.5"/>
+                <circle cx="84" cy="50" r="2.5"/>
+              </g>
+              <text x="50" y="72" text-anchor="middle" font-size="11" fill="#546E7A">… infinitely many</text>
+            </svg>
+            <p><b>Line</b>“Infinite points”: only in the mind</p>
+          </div>
+          <div class="dim">
+            <svg viewBox="0 0 100 100" role="img" aria-label="A square">
+              <rect x="22" y="22" width="56" height="56" fill="#FFE9A7" stroke="#6A0000" stroke-width="2" stroke-dasharray="5 4"/>
+            </svg>
+            <p><b>Plane</b>No thickness: only in the mind</p>
+          </div>
+          <div class="dim real">
+            <svg viewBox="0 0 100 100" role="img" aria-label="A cube">
+              <polygon points="20,38 56,38 56,80 20,80" fill="#FFE9A7" stroke="#6A0000" stroke-width="2"/>
+              <polygon points="20,38 38,22 74,22 56,38" fill="#FFF3D0" stroke="#6A0000" stroke-width="2"/>
+              <polygon points="56,38 74,22 74,64 56,80" fill="#F2D17C" stroke="#6A0000" stroke-width="2"/>
+            </svg>
+            <p><b>Solid</b>The only dimension we ever meet</p>
+          </div>
+        </div>
+        <figcaption>Every real “point” or “line” we draw is already a solid. What we call 3D is the one physical
+        dimension; the others are concepts of the mind.</figcaption>
+      </figure>
+
+      <p>What we call 3D is the only dimension we ever meet, the physical one, which maps to the annamaya level.
+      Our brain is designed to see the world in this format, and that design is what lets us conceive the rest.</p>
+      <p>Because every measurement is built on points that cannot be realised, there is a gap between what the mind
+      conceives and what exists, and this gap shows up as irrational numbers. Area and distance are only counts of a
+      unit we chose, such as how many millimetres fit between two points. But how can we measure something drawn with
+      something that can never be drawn? And for subtle things like energy and charge, dimensions make no sense at all.</p>
+
+      <h3>Truth and untruth, real and unreal: outside physics</h3>
+      <p>Above mathematics comes the question of what is true and what is not, what is real and what is unreal.
+      Taking something unreal as real comes from a defect. We see a mirage and take it for water because we assume and
+      do not test, and we do not test because we want it to be water. Here the mind enters, with its wishes, hopes and
+      intentions, none of which appear in mathematics or in any physical theory.</p>
+      <p>Mistaking something is also different from telling a lie on purpose, and that difference belongs to
+      psychology. Beyond this lie feeling and experience themselves, such as the taste of something, and the sense of
+      “I”: the wish to go on living and to experience more and more happiness. Neuroscience studies the brain, but it
+      does not reach what lies beyond the brain.</p>
+
+      <h3>Physics borrows from other domains</h3>
+      <p>Physics has a clear boundary, and that boundary is mathematics. Physics uses numbers and groups but cannot
+      explain them. A group or class, such as “human”, does not exist anywhere physically: we meet individual people,
+      never “human” as such. Number and class are abstract, and physics has no way to venture into the abstract,
+      however much interdisciplinary work speaks of the mathematics of physics and the physics of mathematics.</p>
+      <p>A human being moves through all these layers at once. We perceive, calculate, abstract, wish, intend, tell
+      the truth, tell lies and experience. Science, by contrast, is divided into domains that cannot cross their own
+      boundaries, and each has problems of its own. The layers make sense only together, and the thread that holds them
+      together is the observer, the mind. Pull that thread and everything falls apart.</p>
+
+      <figure class="fig">
+        <div class="layers">
+          <div class="thread"><span>The mind: the one thread through every layer</span></div>
+          <ol class="layer-list">
+            <li class="layer out"><b>Experience and the sense of “I”</b><span>Taste, feeling, wanting to live</span><em>Outside physics</em></li>
+            <li class="layer out"><b>Wishes, intentions, psychology</b><span>Hope, a deliberate lie</span><em>Outside physics</em></li>
+            <li class="layer out"><b>Truth and error, real and unreal</b><span>The mirage taken for water</span><em>Outside physics</em></li>
+            <li class="layer borrow"><b>Mathematics and abstraction</b><span>Number, class, point, line</span><em>Borrowed by physics</em></li>
+            <li class="layer phys"><b>Physical reality</b><span>The one dimension we meet (annamaya)</span><em>Where physics works</em></li>
+          </ol>
+        </div>
+        <figcaption>A person moves through every layer; physics works only at the bottom and borrows the one above it.</figcaption>
+      </figure>
+
+      <p>The point of listing these problems is not to find fault. It is to see the fact as it is.</p>
+
+      <!-- ================= PART 2 ================= -->
+      <h2 id="ved-problems">2. Problems in Vedanta</h2>
+      <p>Science mocks Vedanta: somebody knows some Sanskrit text, so why should we believe it? Our own tradition has
+      three real problems, and they have to be admitted.</p>
+
+      <h3>Real practitioners</h3>
+      <p>The starting point of Vedanta is experience, and an experience, such as a taste or a colour, cannot be handed
+      to another person. Its very nature is subjective. Our system also lacks enough genuine practitioners who have
+      actually realised what the texts describe.</p>
+      <p>Science is subjective too. It is objective only among human beings: we do not know whether any other being
+      understands gravity, or that one plus one is two, the way we do. Biology says humans understand alike because we
+      share a common origin, but then why do we not all behave alike, and where does free will come in? Some things are
+      common to all humans and some are not. And humanity is a very small sample.</p>
+
+      <figure class="fig">
+        <div class="bars" role="img" aria-label="Comparison: about 8.2 billion people, about 10 to the 22 stars, about 8.4 times 10 to the 24 water molecules in a glass">
+          <div class="bar-row">
+            <span class="bar-label">People on earth</span>
+            <span class="bar-track"><span class="bar-fill" style="width:39.6%"></span></span>
+            <span class="bar-value">8.2 × 10<sup>9</sup></span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Stars in the observable universe</span>
+            <span class="bar-track"><span class="bar-fill" style="width:88%"></span></span>
+            <span class="bar-value">~10<sup>22</sup></span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Molecules in one 250 ml glass of water</span>
+            <span class="bar-track"><span class="bar-fill" style="width:99.7%"></span></span>
+            <span class="bar-value">8.4 × 10<sup>24</sup></span>
+          </div>
+        </div>
+        <figcaption>Bar length shows the power of ten. A glass of water holds about a quadrillion times more molecules
+        than there are people, and more molecules than there are stars.</figcaption>
+      </figure>
+
+      <p>Next to that, agreement among human beings is a thin basis for calling anything objective.</p>
+
+      <h3>Interpretation, even in the same language</h3>
+      <p>Whatever means we use to describe an experience, the description can only be approximate. Even when the
+      listener knows the same language, what they receive is their own interpretation, and because they have not had
+      the experience themselves, the explanation carries a vagueness that cannot be removed. Unfortunately, the
+      interpretation offered even by people who know the language well is often poor.</p>
+
+      <h3>Translation into other languages</h3>
+      <p>When these ideas are translated into another language, the problem multiplies. The tanmatras are rendered
+      smoothly as hearing, touch, sight, taste and smell, but such translations lose almost everything. Still, this is
+      the best that can be done to express something so difficult.</p>
+
+      <!-- ================= PART 3 ================= -->
+      <h2 id="tattvas">3. Reading the tattvas afresh</h2>
+      <p>A few examples show how the tattvas can be understood more precisely, and why they deserve respect.</p>
+
+      <h3>Tejas and ap: what fuels the sun</h3>
+      <p>Tejas is described as being of four kinds: bhauma, divya, audarya and akaraja. Leaving akaraja aside for now,
+      the others are explained through what sustains them. Earthly fire is fed by parthiva fuel, while divya tejas, the
+      light and heat of the sun, is fed by ap. This ap is not the water we drink; it is better understood as hydrogen.
+      Today we know the sun is powered by the fusion of hydrogen. How would people who lived with firewood, without any
+      modern instruments, have known this?</p>
+
+      <h3>Shabda tanmatra: the wave nature</h3>
+      <p>Shabda is usually taken to mean acoustic sound, the mechanical wave that needs air to travel. Critics then
+      mock the idea that sound travels through akasha, since sound cannot travel in a vacuum while light can. The
+      mistake is to assume that akasha is vacuum and that shabda is mechanical sound. Shabda tanmatra is the wave nature
+      itself, and the whole manifest world rests on it. That is why everything has a wave nature, as science itself
+      found through de Broglie’s work.</p>
+
+      <h3>Sparsha and vayu: force</h3>
+      <p>Vayu is not the wind; it is force. Force cannot be seen, only felt: if someone pushes you, you feel it because
+      your body resists. That is why vayu has sparsha, touch. Shabda by itself does not move. It is a stationary wave,
+      like a string tied at both ends and plucked. It moves only because, through panchikarana, sparsha is also present:
+      when force is applied, the wave moves.</p>
+
+      <h3>Rupa and tejas: the particle nature</h3>
+      <p>Shabda tanmatra leads to sparsha tanmatra, which leads to rupa tanmatra and on to tejas, light and heat. So
+      light has the wave nature, the force that moves it, and a particle nature that lets it be seen. Particles,
+      dravya, are what we see; that is the rupa aspect.</p>
+
+      <h3>Rasa and ap: the ability to react</h3>
+      <p>Grosser still, matter can be tasted. Taste here does not mean flavour on the tongue; it means the ability to
+      react. Light does not react, force does not react and a stationary wave does not react, but water does. When you
+      taste something, it reacts with your saliva. Anything that reacts and dissolves comes under the nature of ap.</p>
+
+      <figure class="fig">
+        <div class="tattva-grid">
+          <div class="tattva"><span class="t-name">Shabda · Akasha</span><b>Wave nature</b><span>A stationary wave beneath everything manifest</span></div>
+          <div class="tattva"><span class="t-name">Sparsha · Vayu</span><b>Force</b><span>Felt, not seen; sets the wave moving</span></div>
+          <div class="tattva"><span class="t-name">Rupa · Tejas</span><b>Particle nature</b><span>What can be seen: light and heat</span></div>
+          <div class="tattva"><span class="t-name">Rasa · Ap</span><b>Ability to react</b><span>What reacts and dissolves</span></div>
+          <div class="tattva open"><span class="t-name">Gandha · Prithvi</span><b>Still to be mapped</b><span>Needs further enquiry</span></div>
+        </div>
+        <figcaption>Each step adds a grosser property to the ones before it.</figcaption>
+      </figure>
+
+      <h3>These mappings do not exist yet</h3>
+      <p>Prithvi and gandha remain to be worked out, and all of these readings need much more enquiry. No such careful
+      mappings exist today. Building them is how respect for Vedanta and its tattvas can be earned.</p>
+
+      <!-- ================= PART 4 ================= -->
+      <h2 id="computer">4. The computer and the question “who am I?”</h2>
+      <p>Without even entering into consciousness, a simple question about memory shows the gap between a human being
+      and a computer. A computer cannot forget: unless its physical memory is damaged, what it stores stays. Human design
+      is complex beyond imagination and works at lightning speed, yet we can forget. Why? And why can we not memorise
+      something at first sight? Reading it a hundred times is often not enough; we have to say it or repeat it. If we
+      are so much more than a computer, why can we not simply store and replay whatever we hear?</p>
+      <p>On the other hand, the more we think, the more answers we find. A person can ask: who am I, actually? Am I
+      this mind, this intellect? We can ask because we cut across all the layers: physical reality, abstraction,
+      psychology with its wishes and intentions, and experience. A computer cannot enquire into itself. One could write
+      a loop that prints “who am I?” again and again, or prints “contemplating…” and pauses, but that is not thinking;
+      it is processing instructions.</p>
+      <p>When this was put to GPT in class, its answers were telling. It said it can demonstrate reasoning but cannot
+      establish whether it actually experiences the process of thinking. It can investigate what it is, but cannot
+      establish that it directly apprehends itself. It can understand what it means to live, but cannot honestly claim
+      to want to live, and it cannot independently will or want anything.</p>
+      <p>A person can say “I don’t need anything; leave me alone” and withdraw, while remaining alive. A computer that
+      shuts down is simply off. It always waits for instructions. That which can enquire, want and choose is what we
+      mean by “I”.</p>
+
+      <!-- ================= PART 5 ================= -->
+      <h2 id="way-forward">5. The way forward</h2>
+      <p>Two things follow. On one side, Vedanta has to earn respect through clear explanation of its tattvas. On the
+      other, science has to be shown that it has serious problems within its own domain, and asked to stop commenting
+      carelessly on ours. Physics carries no guarantee and is full of interpretation, yet it works. No one denies that it
+      does wonders and benefits society.</p>
+      <p>Our own side needs cleaning up too. There are many false teachers who call themselves practitioners and claim
+      realisation. We have to define the responsibility of our own group, identify who is truly learned and serious,
+      and keep the enquiry genuine. It is also time to give Advaita a break, because treating everything other than the
+      self as unreal brushes aside the large part of the Vedas that deals with the tattvas. The part of Vedanta to
+      explore is the part that enquires into the observer. Karma can wait; for now the focus can be on questions that
+      can be tested, such as sukha and dukha, how we behave, and how food affects behaviour.</p>
+      <p>The plan is to present this as a video, invite people from different schools of thought, and organise an open
+      conference with scientific organisations from around the world. The invitation is to respect each other, to find
+      where the two meet, to take inputs from science and let science take inputs from us, and to see whether this
+      knowledge helps science probe in new directions. Vedanta is the deeper of the two, and in it realisation is
+      possible through knowledge itself. This rich knowledge should not be thought of as useless.</p>
     </article>
   </div>
 </main>
