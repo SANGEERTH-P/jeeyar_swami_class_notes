@@ -335,3 +335,51 @@ footer {
   .tile { transition: none; }
   .tile:hover { transform: none; }
 }
+
+/* ---------- about page ---------- */
+.about-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-left: 6px solid var(--maroon);
+  border-radius: 10px;
+  padding: 36px 40px;
+  box-shadow: var(--shadow);
+}
+.about-text { flex: 1 1 auto; min-width: 0; }
+.about-text p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 16px; }
+.about-text p:last-child { margin-bottom: 0; }
+.about-photo { flex: 0 0 260px; }
+.about-photo img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--line);
+  box-shadow: 0 8px 24px rgba(106, 0, 0, 0.12);
+}
+.temple {
+  max-width: 980px;
+  margin: 32px auto 0;
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-left: 6px solid var(--saffron);
+  border-radius: 10px;
+  padding: 28px 40px;
+  box-shadow: var(--shadow);
+}
+.temple h2 { font-size: 1.35rem; margin-bottom: 10px; }
+.temple p { font-size: 1.05rem; line-height: 1.8; }
+
+@media (max-width: 860px) {
+  .about-card {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 20px;
+  }
+  .about-photo { flex: 0 0 auto; width: min(240px, 100%); }
+  .temple { padding: 22px 20px; }
+}

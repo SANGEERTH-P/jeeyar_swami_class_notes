@@ -1,10 +1,11 @@
-# Jeeyar Swami Class Notes
+# Ponnadiyaam Sengamalam
 
 Live site: https://sangeerth-p.github.io/jeeyar_swami_class_notes/
 
 ## Files
 
 - `index.html` - home page
+- `about.html` - Jeeyar Swami details and the Saligrama temple
 - `classes.html` - the tiles for each subject
 - `guru-parampara.html`, `mumukshuppadi.html`, `tattvatrayam.html`,
   `anushtanams.html`, `science.html` - the notes for each subject
