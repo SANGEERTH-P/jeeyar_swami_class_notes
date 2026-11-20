@@ -5,7 +5,7 @@ Live site: https://sangeerth-p.github.io/jeeyar_swami_class_notes/
 ## Files
 
 - `index.html` - home page
-- `about.html` - Jeeyar Swami details and the Saligrama temple
+- `about.html` - Jeeyar Swami details (from the biography PDF in `docs/`)
 - `classes.html` - the tiles for each subject
 - `guru-parampara.html`, `mumukshuppadi.html`, `tattvatrayam.html`,
   `anushtanams.html`, `science.html` - the notes for each subject
@@ -26,5 +26,11 @@ Use `lang="ta"` for Tamil.
 
 ## Adding a science discussion
 
-In `science.html`, add a link in the `pills` box (e.g. `#discussion-3`) and
-copy an `<article>` with the same id.
+Each article is its own page, kept in a folder per year and month:
+
+    science/2026/november/science-and-vedanta.html
+
+1. Copy an existing article file into the right folder (create `science/YEAR/MONTH/` if needed)
+   and replace the title, date and text.
+2. In `science.html`, copy one `<a class="tile">` block, point its `href` at the new file,
+   and change the heading, one-line description and month.
