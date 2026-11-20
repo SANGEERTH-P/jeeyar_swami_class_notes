@@ -704,3 +704,21 @@ details.drop[open] summary { border-bottom: 1px solid var(--line); }
   .article-head { padding: 20px 16px 14px; }
   .article-head h1 { font-size: 1.45rem; }
 }
+
+/* ---------- Tamil text a little smaller (Tamil letters look larger than Latin at the same size) ---------- */
+.article-page[lang="ta"] .article-head h1 { font-size: 1.6rem; }
+.article-page[lang="ta"] .article p,
+.article-page[lang="ta"] .article li { font-size: 1.02rem; line-height: 1.85; }
+.article-page[lang="ta"] .article > h2 { font-size: 1.35rem; }
+.article-page[lang="ta"] .tbl { font-size: 0.95rem; }
+.tile[lang="ta"] h2 { font-size: 1.2rem; }
+.tile[lang="ta"] p { font-size: 0.93rem; }
+.page-head .ta { font-size: 1.2rem; }
+.tile .tag { font-size: 0.88rem; }
+
+@media (max-width: 768px) {
+  .article-page[lang="ta"] .article-head h1 { font-size: 1.3rem; }
+  .article-page[lang="ta"] .article p,
+  .article-page[lang="ta"] .article li { font-size: 0.97rem; }
+  .article-page[lang="ta"] .article > h2 { font-size: 1.15rem; }
+}
